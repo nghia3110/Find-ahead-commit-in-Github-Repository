@@ -1,0 +1,10 @@
+<ul class="list-group">
+    {{#each aheadCommits}}
+    <li class="list-group-item">
+        <p>{{this.message}}</p>
+        <a href="{{this.url}}">Go To Commit</a>
+        <p>{{this.author.name}}</p>
+        <p>{{this.author.date}}</p>
+    </li>
+    {{/each}}
+</ul>

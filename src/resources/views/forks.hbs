@@ -1,0 +1,18 @@
+<h1>{{source_path}}</h1>
+<ul class="list-group">
+    {{#each forksList}}
+    <li class="list-group-item">
+        <a href="/commit?path={{this.path}}&user={{this.user}}&repos={{this.repos}}">
+            {{this.path}}
+        </a>
+    </li>
+    {{/each}}
+</ul>
+
+<script>
+    var source = `{{source_path}}`;
+    var list = document.getElementsByTagName('a');
+    for (var i = 0; i < list.length; i++) {
+        list[i].href += `&source=${source}`;
+    }
+</script>
